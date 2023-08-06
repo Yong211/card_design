@@ -23,7 +23,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
+            width: 500px;
             height: 100vh;
+            padding: 30px;
+            margin: 0 auto;
+            gap: 20px;
+            box-sizing: border-box;
             /* background: #f1df99; */
         }
         #design .card-section{
@@ -122,9 +128,47 @@
 
 <body>
     <div id="design">
-        <div class="card-section">
+        <div class="card-section card-section-1">
             <div class="card-image">
                 <img src="images/리플릿 디자인.png" alt="aa">
+            </div>
+            <div class="card-body">
+                <div class="card-body-in">
+                    <div class="card-body-text">
+                        <h2>제목입니다</h2>
+                        <p>본문 내용입니다</p>
+                    </div>
+                    <div class="card-body-button">
+                        <button type="button">버튼 1</button>
+                    </div>
+                </div>
+                <div class="arrow">
+                    <b>></b>
+                </div>
+            </div>
+        </div>
+        <div class="card-section card-section-2">
+            <div class="card-image">
+                <img src="images/상세페이지 디자인(디저트 카페 01).jpg" alt="aa">
+            </div>
+            <div class="card-body">
+                <div class="card-body-in">
+                    <div class="card-body-text">
+                        <h2>제목입니다</h2>
+                        <p>본문 내용입니다</p>
+                    </div>
+                    <div class="card-body-button">
+                        <button type="button">버튼 1</button>
+                    </div>
+                </div>
+                <div class="arrow">
+                    <b>></b>
+                </div>
+            </div>
+        </div>
+        <div class="card-section card-section-3">
+            <div class="card-image">
+                <img src="images/아이덴디티 로고.jpg" alt="aa">
             </div>
             <div class="card-body">
                 <div class="card-body-in">
@@ -145,8 +189,8 @@
     <script>
         $('#design .card-section .card-body').mouseover(function(){
             // $('#design .card-section .card-image').css('width','300px');
-            $('#design .card-section .card-body').css('right','-250px');
-            $('#design .card-section .card-body .arrow b').css('transform','rotateY(-180deg)')
+            $(this).css('right','-250px');
+            $(this).find('.arrow b').css('transform','rotateY(-180deg)')
 
         });
         $('#design .card-section .card-body').mouseout(function(){
